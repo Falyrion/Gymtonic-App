@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="DialogStyle" parent="Theme.AppCompat.Light.Dialog">
+        <!-- Used for the buttons -->
+        <item name="colorAccent">@color/text_middle</item>
+        <!-- Used for the title and text -->
+        <item name="android:textColorPrimary">@color/text_middle</item>
+        <!-- Used for the background -->
+        <item name="android:background">@color/middle_purple</item>
+    </style>
+
+</resources>

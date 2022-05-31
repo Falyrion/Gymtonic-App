@@ -1,0 +1,1162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.Activity_Meals_CreateEditPreset"
+    android:background="@color/dark_purple">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarActivityCreateMeal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@color/text_middle"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarActivityCreateMeal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- Section title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Meal Name"
+                android:textColor="@color/text_low"
+                android:textSize="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/shape_box_round_middle"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editTextMealName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:hint="Enter meal name here"
+                    android:background="@null"
+                    android:textColorHint="@color/text_low"
+                    android:textAlignment="center"
+                    android:textColor="@color/text_middle" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <!-- Section title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Category"
+                android:textColor="@color/text_low"
+                android:textSize="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/shape_box_round_middle">
+
+                <Spinner
+                    android:id="@+id/spinnerMealCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:tooltipText="Select category" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <!-- Section title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="General Data"
+                android:textColor="@color/text_low"
+                android:textSize="20dp"/>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:background="@drawable/shape_box_round_middle">
+
+                <TableRow
+                    android:layout_marginTop="2dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Calories"
+                        android:textColor="@color/text_middle"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextCalories"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="20dp"
+                        android:ems="10"
+                        android:hint="0.0"
+                        android:backgroundTint="@color/text_low"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_middle"
+                        android:textColorHint="@color/text_low"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="2dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Fat [g]"
+                        android:textColor="@color/text_middle"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextFat"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="20dp"
+                        android:ems="10"
+                        android:hint="0.0"
+                        android:backgroundTint="@color/text_low"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_middle"
+                        android:textColorHint="@color/text_low"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="2dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Saturated Fat [g]"
+                        android:textColor="@color/text_middle"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextFatSat"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="20dp"
+                        android:ems="10"
+                        android:hint="0.0"
+                        android:backgroundTint="@color/text_low"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_middle"
+                        android:textColorHint="@color/text_low"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="2dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Carbohydrates [g]"
+                        android:textColor="@color/text_middle"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextCarbs"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="20dp"
+                        android:ems="10"
+                        android:hint="0.0"
+                        android:backgroundTint="@color/text_low"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_middle"
+                        android:textColorHint="@color/text_low"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="2dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Sugar [g]"
+                        android:textColor="@color/text_middle"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextSugar"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="20dp"
+                        android:ems="10"
+                        android:hint="0.0"
+                        android:backgroundTint="@color/text_low"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_middle"
+                        android:textColorHint="@color/text_low"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="2dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Protein [g]"
+                        android:textColor="@color/text_middle"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextProtein"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="20dp"
+                        android:ems="10"
+                        android:hint="0.0"
+                        android:backgroundTint="@color/text_low"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_middle"
+                        android:textColorHint="@color/text_low"
+                        android:textStyle="bold" />
+                </TableRow>
+
+            </TableLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <!-- Section title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Details (Optional)"
+                android:textColor="@color/text_low"
+                android:textSize="20dp"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:background="@drawable/shape_box_round_middle">
+
+                <TableRow
+                    android:layout_marginTop="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Salt [g]"
+                        android:textColor="@color/text_middle"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextSalt"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="20dp"
+                        android:ems="10"
+                        android:hint="0.0"
+                        android:backgroundTint="@color/text_low"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_middle"
+                        android:textColorHint="@color/text_low"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="2dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Fiber [g]"
+                        android:textColor="@color/text_middle"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextFiber"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="20dp"
+                        android:ems="10"
+                        android:hint="0.0"
+                        android:backgroundTint="@color/text_low"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_middle"
+                        android:textColorHint="@color/text_low"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="2dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Cholesterin [mg]"
+                        android:textColor="@color/text_middle"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextCholesterin"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="20dp"
+                        android:ems="10"
+                        android:hint="0.0"
+                        android:backgroundTint="@color/text_low"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_middle"
+                        android:textColorHint="@color/text_low"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <!-- Creatine -->
+                <TableRow
+                    android:layout_marginTop="2dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Creatine [g]"
+                        android:textColor="@color/text_middle"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextCreatine"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="20dp"
+                        android:ems="10"
+                        android:hint="0.0"
+                        android:backgroundTint="@color/text_low"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_middle"
+                        android:textColorHint="@color/text_low"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <!-- Ca -->
+                <TableRow
+                    android:layout_marginTop="2dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Calcium [mg]"
+                        android:textColor="@color/text_middle"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextCa"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="20dp"
+                        android:ems="10"
+                        android:hint="0.0"
+                        android:backgroundTint="@color/text_low"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_middle"
+                        android:textColorHint="@color/text_low"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <!-- Fe -->
+                <TableRow
+                    android:layout_marginTop="2dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Iron [mg]"
+                        android:textColor="@color/text_middle"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextFe"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="20dp"
+                        android:ems="10"
+                        android:hint="0.0"
+                        android:backgroundTint="@color/text_low"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_middle"
+                        android:textColorHint="@color/text_low"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <!-- K -->
+                <TableRow
+                    android:layout_marginTop="2dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Kalium [mg]"
+                        android:textColor="@color/text_middle"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextKa"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="20dp"
+                        android:ems="10"
+                        android:hint="0.0"
+                        android:backgroundTint="@color/text_low"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_middle"
+                        android:textColorHint="@color/text_low"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <!-- Mg -->
+                <TableRow
+                    android:layout_marginTop="2dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Mangan [mg]"
+                        android:textColor="@color/text_middle"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextMg"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="20dp"
+                        android:ems="10"
+                        android:hint="0.0"
+                        android:backgroundTint="@color/text_low"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_middle"
+                        android:textColorHint="@color/text_low"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <!-- Mn -->
+                <TableRow
+                    android:layout_marginTop="2dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Mn [mg]"
+                        android:textColor="@color/text_middle"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextMn"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="20dp"
+                        android:ems="10"
+                        android:hint="0.0"
+                        android:backgroundTint="@color/text_low"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_middle"
+                        android:textColorHint="@color/text_low"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <!-- Na -->
+                <TableRow
+                    android:layout_marginTop="2dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Natrium [mg]"
+                        android:textColor="@color/text_middle"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextNa"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="20dp"
+                        android:ems="10"
+                        android:hint="0.0"
+                        android:backgroundTint="@color/text_low"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_middle"
+                        android:textColorHint="@color/text_low"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <!-- P -->
+                <TableRow
+                    android:layout_marginTop="2dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Phosphorus [mg]"
+                        android:textColor="@color/text_middle"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextP"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="20dp"
+                        android:ems="10"
+                        android:hint="0.0"
+                        android:backgroundTint="@color/text_low"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_middle"
+                        android:textColorHint="@color/text_low"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <!-- Zn -->
+                <TableRow
+                    android:layout_marginTop="2dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Zinc [mg]"
+                        android:textColor="@color/text_middle"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextZn"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="20dp"
+                        android:ems="10"
+                        android:hint="0.0"
+                        android:backgroundTint="@color/text_low"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_middle"
+                        android:textColorHint="@color/text_low"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <!-- Vit A -->
+                <TableRow
+                    android:layout_marginTop="2dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Vitamin A [mg]"
+                        android:textColor="@color/text_middle"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextVitA"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="20dp"
+                        android:ems="10"
+                        android:hint="0.0"
+                        android:backgroundTint="@color/text_low"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_middle"
+                        android:textColorHint="@color/text_low"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="2dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Vitamin B1 [mg]"
+                        android:textColor="@color/text_middle"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextVitB1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="20dp"
+                        android:ems="10"
+                        android:hint="0.0"
+                        android:backgroundTint="@color/text_low"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_middle"
+                        android:textColorHint="@color/text_low"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="2dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Vitamin B2 [mg]"
+                        android:textColor="@color/text_middle"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextVitB2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="20dp"
+                        android:ems="10"
+                        android:hint="0.0"
+                        android:backgroundTint="@color/text_low"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_middle"
+                        android:textColorHint="@color/text_low"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="2dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Vitamin B3 [mg]"
+                        android:textColor="@color/text_middle"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextVitB3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="20dp"
+                        android:ems="10"
+                        android:hint="0.0"
+                        android:backgroundTint="@color/text_low"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_middle"
+                        android:textColorHint="@color/text_low"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="2dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Vitamin B5 [mg]"
+                        android:textColor="@color/text_middle"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextVitB5"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="20dp"
+                        android:ems="10"
+                        android:hint="0.0"
+                        android:backgroundTint="@color/text_low"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_middle"
+                        android:textColorHint="@color/text_low"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="2dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Vitamin B6 [mg]"
+                        android:textColor="@color/text_middle"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextVitB6"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="20dp"
+                        android:ems="10"
+                        android:hint="0.0"
+                        android:backgroundTint="@color/text_low"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_middle"
+                        android:textColorHint="@color/text_low"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="2dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Vitamin B7 [mg]"
+                        android:textColor="@color/text_middle"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextVitB7"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="20dp"
+                        android:ems="10"
+                        android:hint="0.0"
+                        android:backgroundTint="@color/text_low"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_middle"
+                        android:textColorHint="@color/text_low"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="2dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Vitamin B11 [mg]"
+                        android:textColor="@color/text_middle"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextVitB11"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="20dp"
+                        android:ems="10"
+                        android:hint="0.0"
+                        android:backgroundTint="@color/text_low"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_middle"
+                        android:textColorHint="@color/text_low"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="2dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Vitamin B12 [mg]"
+                        android:textColor="@color/text_middle"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextVitB12"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="20dp"
+                        android:ems="10"
+                        android:hint="0.0"
+                        android:backgroundTint="@color/text_low"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_middle"
+                        android:textColorHint="@color/text_low"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="2dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Vitamin C [mg]"
+                        android:textColor="@color/text_middle"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextVitC"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="20dp"
+                        android:ems="10"
+                        android:hint="0.0"
+                        android:backgroundTint="@color/text_low"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_middle"
+                        android:textColorHint="@color/text_low"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="2dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Vitamin E [mg]"
+                        android:textColor="@color/text_middle"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextVitE"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="20dp"
+                        android:ems="10"
+                        android:hint="0.0"
+                        android:backgroundTint="@color/text_low"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_middle"
+                        android:textColorHint="@color/text_low"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="2dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Vitamin K [mg]"
+                        android:textColor="@color/text_middle"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextVitK"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="20dp"
+                        android:ems="10"
+                        android:hint="0.0"
+                        android:backgroundTint="@color/text_low"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_middle"
+                        android:textColorHint="@color/text_low"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="2dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Vitamin H [mg]"
+                        android:textColor="@color/text_middle"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextVitH"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="20dp"
+                        android:ems="10"
+                        android:hint="0.0"
+                        android:backgroundTint="@color/text_low"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_middle"
+                        android:textColorHint="@color/text_low"
+                        android:textStyle="bold" />
+                </TableRow>
+
+            </TableLayout>
+
+
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:fadingEdge="vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonCancelNewMeal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_box_round_light"
+            android:textColor="@color/text_middle"
+            android:text="Cancel" />
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="match_parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonSaveNewMeal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_box_round_light"
+            android:textColor="@color/text_middle"
+            android:text="Save" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

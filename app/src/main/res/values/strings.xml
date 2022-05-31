@@ -1,0 +1,77 @@
+<resources>
+
+    <string name="app_name">Gymtonic</string>
+
+    <!-- Meal Data -->
+    <string name="calories">Calories</string>
+    <string name="calories_kcal">Calories [kcal]</string>
+    <string name="fat">Fat</string>
+    <string name="fat_g">Fat [g]</string>
+    <string name="fat_sat">Saturated fats</string>
+    <string name="fat_sat_g">Saturated fats [g]</string>
+    <string name="carbs">Carbohydrates</string>
+    <string name="carbs_g">Carbohydrates [g]</string>
+    <string name="sugar">Sugar</string>
+    <string name="sugar_g">Sugar [g]</string>
+    <string name="protein">Protein</string>
+    <string name="protein_g">Protein [g]</string>
+
+    <string name="salt">Salt</string>
+    <string name="salt_g">Salt [g]</string>
+    <string name="fiber">Fiber</string>
+    <string name="fiber_g">Fiber [g]</string>
+    <string name="cholesterol">Cholesterol</string>
+    <string name="cholesterol_mg">Cholesterol [mg]</string>
+    <string name="creatine_g">Creatine</string>
+    <string name="creatine">Creatine [g]</string>
+    <string name="ca">Calcium</string>
+    <string name="ca_mg">Calcium [mg]</string>
+    <string name="fe">Iron</string>
+    <string name="fe_mg">Iron [mg]</string>
+    <string name="ka">Potassium</string>
+    <string name="ka_mg">Potassium [mg]</string>
+    <string name="mg">Magnesium</string>
+    <string name="mg_mg">Magnesium [mg]</string>
+    <string name="mn">Manganese</string>
+    <string name="mn_mg">Manganese [mg]</string>
+    <string name="na">Sodium</string>
+    <string name="na_mg">Sodium [mg]</string>
+    <string name="phosphorus">Phosphorus</string>
+    <string name="phosphorus_mg">Phosphorus [mg]</string>
+    <string name="zn">Zinc</string>
+    <string name="zn_mg">Zinc [mg]</string>
+    <string name="vit_a">Vitamin A</string>
+    <string name="vit_a_mg">Vitamin A [mg]</string>
+    <string name="vit_b1">Vitamin B1</string>
+    <string name="vit_b1_mg">Vitamin B1 [mg]</string>
+    <string name="vit_b2">Vitamin B2</string>
+    <string name="vit_b2_mg">Vitamin B2 [mg]</string>
+    <string name="vit_b3">Vitamin B3</string>
+    <string name="vit_b3_mg">Vitamin B3 [mg]</string>
+    <string name="vit_b5">Vitamin B5</string>
+    <string name="vit_b5_mg">Vitamin B5 [mg]</string>
+    <string name="vit_b6">Vitamin B6</string>
+    <string name="vit_b6_mg">Vitamin B6 [mg]</string>
+    <string name="vit_b7">Vitamin B7</string>
+    <string name="vit_b7_mg">Vitamin B7 [mg]</string>
+    <string name="vit_b11">Vitamin B11</string>
+    <string name="vit_b11_mg">Vitamin B11 [mg]</string>
+    <string name="vit_b12">Vitamin B12</string>
+    <string name="vit_b12_mg">Vitamin B12 [mg]</string>
+    <string name="vit_c">Vitamin C</string>
+    <string name="vit_c_mg">Vitamin C [mg]</string>
+    <string name="vit_e">Vitamin E</string>
+    <string name="vit_e_mg">Vitamin E [mg]</string>
+    <string name="vit_k">Vitamin K</string>
+    <string name="vit_k_mg">Vitamin K [mg]</string>
+    <string name="vit_h">Vitamin H</string>
+    <string name="vit_h_mg">Vitamin H [mg]</string>
+
+    <!-- Dashboard Nutrition -->
+    <string name="dn_header_01">Today\'s Overview</string>
+    <string name="dn_header_02">Details</string>
+    <string name="dn_button_add">Add Meal</string>
+    <string name="dn_button_edit">Todays Meals</string>
+
+
+</resources>

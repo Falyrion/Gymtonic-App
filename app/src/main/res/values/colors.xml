@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="dark_purple">#131929</color>  <!-- StatusBar, App-Background -->
+    <color name="middle_purple">#1A2237</color>  <!-- NavBar, Widget-Background, Toolbar -->
+    <color name="light_purple">#2A3752</color>  <!-- Progress Bar (empty) -->
+    <color name="text_low">#60687F</color>  <!-- Low level text and button-icons -->
+    <color name="text_middle">#99A4C5</color>  <!-- Middle priority level text and button-icons -->
+    <color name="text_high">#CDFFFFFF</color>  <!-- High priority level text and button-icons -->
+    <color name="pop_orange">#F97141</color>  <!-- Fill for Progress Bar -->
+</resources>

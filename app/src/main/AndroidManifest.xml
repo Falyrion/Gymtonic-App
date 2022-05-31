@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.falyrion.gymtonicapp">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GymtonicApp">
+
+        <activity
+            android:name="com.falyrion.gymtonicapp.activities.Activity_Workout_EditRoutines"
+            android:exported="false"
+            android:screenOrientation="sensorPortrait"
+            android:parentActivityName="com.falyrion.gymtonicapp.Activity_Main" />
+        <activity
+            android:name="com.falyrion.gymtonicapp.activities.Activity_Workout_EditPlans"
+            android:exported="false"
+            android:screenOrientation="sensorPortrait"
+            android:parentActivityName="com.falyrion.gymtonicapp.Activity_Main" />
+        <activity
+            android:name="com.falyrion.gymtonicapp.activities.Activity_Meals_MealsOfDay"
+            android:exported="false"
+            android:screenOrientation="sensorPortrait"
+            android:parentActivityName="com.falyrion.gymtonicapp.Activity_Main" />
+        <activity
+            android:name="com.falyrion.gymtonicapp.activities.Activity_Workout_CreateEditExercise"
+            android:exported="false"
+            android:screenOrientation="sensorPortrait"
+            android:parentActivityName="com.falyrion.gymtonicapp.Activity_Main" />
+        <activity
+            android:name="com.falyrion.gymtonicapp.activities.Activity_Meals_AddDailyEntry"
+            android:exported="false"
+            android:screenOrientation="sensorPortrait"
+            android:parentActivityName="com.falyrion.gymtonicapp.Activity_Main" />
+        <activity
+            android:name="com.falyrion.gymtonicapp.activities.Activity_Meals_CreateEditPreset"
+            android:exported="false"
+            android:screenOrientation="sensorPortrait"
+            android:parentActivityName="com.falyrion.gymtonicapp.activities.Activity_Meals_AddDailyEntry" />
+        <activity
+            android:name="com.falyrion.gymtonicapp.activities.Activity_Calendar"
+            android:exported="false"
+            android:screenOrientation="sensorPortrait"
+            android:parentActivityName="com.falyrion.gymtonicapp.Activity_Main" />
+        <activity
+            android:name="com.falyrion.gymtonicapp.activities.Activity_EditBodyStats"
+            android:exported="false"
+            android:screenOrientation="sensorPortrait"
+            android:parentActivityName="com.falyrion.gymtonicapp.Activity_Main" />
+        <activity
+            android:name="com.falyrion.gymtonicapp.Activity_Main"
+            android:screenOrientation="sensorPortrait"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

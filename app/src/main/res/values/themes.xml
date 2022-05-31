@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.GymtonicApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/light_purple</item>
+        <item name="colorPrimaryVariant">@color/dark_purple</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:textColor">@color/text_low</item>  <!-- TextViews -->
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/text_low</item>
+        <item name="colorSecondaryVariant">@color/text_low</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="colorControlNormal">@color/text_middle</item>  <!-- Back Button in Toolbar -->
+        <!-- <item name="android:textColorSecondary">@color/pop_orange</item>  n -->
+    </style>
+</resources>
