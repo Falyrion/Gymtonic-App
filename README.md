@@ -2,7 +2,7 @@
 
 # Gymtonic-App
 
-An Android fitness app for nutrient tracking and workout plans
+An Android fitness app for nutrition tracking and workout plans
 
 *Attention: This app is currently in alpha-development-status.*
 
