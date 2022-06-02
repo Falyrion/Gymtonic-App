@@ -79,4 +79,7 @@
     <string name="button_text_save">Speichern</string>
     <string name="button_text_cancel">Abbrechen</string>
 
+    <string name="lang_de">Deutsch</string>
+    <string name="lang_en">Englisch</string>
+
 </resources>

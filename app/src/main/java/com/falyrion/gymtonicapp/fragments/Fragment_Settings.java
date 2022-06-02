@@ -7,8 +7,11 @@ import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -17,9 +20,11 @@ import com.falyrion.gymtonicapp.Activity_Main;
 import com.falyrion.gymtonicapp.R;
 
 
-public class Fragment_Settings extends Fragment {
+public class Fragment_Settings extends Fragment implements AdapterView.OnItemSelectedListener {
 
     private double[] dataGoals;
+    private String[] languages;
+    private String currentLanguage;
     private boolean savePossible = false;
 
     private Button saveButton;
@@ -69,20 +74,25 @@ public class Fragment_Settings extends Fragment {
         super.onCreate(savedInstanceState);
 
         // Load data from database
-        Cursor cursor = ((Activity_Main) requireContext()).databaseHelper.getSettingsGoals();
-        if (cursor.getCount() > 0) {
-            cursor.moveToFirst();
+        Cursor cursorGoals = ((Activity_Main) requireContext()).databaseHelper.getSettingsGoals();
+        if (cursorGoals.getCount() > 0) {
+            cursorGoals.moveToFirst();
             dataGoals = new double[] {
-                    cursor.getDouble(0),
-                    cursor.getDouble(1),
-                    cursor.getDouble(2),
-                    cursor.getDouble(3)
+                    cursorGoals.getDouble(0),
+                    cursorGoals.getDouble(1),
+                    cursorGoals.getDouble(2),
+                    cursorGoals.getDouble(3)
             };
         } else {
             dataGoals = new double[] {0, 0, 0, 0};
         }
-        cursor.close();
+        cursorGoals.close();
 
+        // Languages
+        languages = new String[] {
+                getResources().getString(R.string.lang_de),
+                getResources().getString(R.string.lang_en)
+        };
     }
 
     @Override
@@ -94,6 +104,7 @@ public class Fragment_Settings extends Fragment {
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        // Nutrition goal settings
         EditText editTextCalories = getView().findViewById(R.id.editTextSettingsGoalsCal);
         editTextCalories.setText(convertDataToText(dataGoals[0]));
         editTextCalories.addTextChangedListener(new textWatcher(0));
@@ -110,6 +121,15 @@ public class Fragment_Settings extends Fragment {
         editTextProtein.setText(convertDataToText(dataGoals[3]));
         editTextProtein.addTextChangedListener(new textWatcher(3));
 
+
+        // Language settings spinner
+        Spinner spinner = getView().findViewById(R.id.spinnerLanguages);
+        spinner.setOnItemSelectedListener(this);
+        ArrayAdapter adapterCategories = new ArrayAdapter(getContext(), R.layout.spinner_item_purple_middle, languages);
+        adapterCategories.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapterCategories);
+
+        // Button
         saveButton = getView().findViewById(R.id.buttonSaveSettings);
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -120,8 +140,30 @@ public class Fragment_Settings extends Fragment {
                     saveButton.setTextColor(getContext().getColor(R.color.text_middle));
 
                     ((Activity_Main) requireContext()).databaseHelper.setSettingsGoals(dataGoals[0], dataGoals[1], dataGoals[2], dataGoals[3]);
+                    ((Activity_Main) requireContext()).databaseHelper.setSettingsLanguage(currentLanguage);
+
                 }
             }
         });
+    }
+
+    // Methods from imported spinner interface -----------------------------------------------------
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
+        // Set value
+        switch (position) {
+            case 0: currentLanguage = "de"; break;
+            case 1: currentLanguage = "en"; break;
+        }
+
+        // Update button
+        saveButton.setBackgroundResource(R.drawable.shape_box_round_pop);
+        saveButton.setTextColor(getContext().getColor(R.color.text_high));
+        savePossible = true;
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+        // Pass
     }
 }

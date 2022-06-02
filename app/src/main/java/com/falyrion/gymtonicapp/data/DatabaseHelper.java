@@ -17,7 +17,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     private Context context;
     private static final String DATABASE_NAME = "gymtonicapp.db";
-    private static final int DATABASE_VERSION = 40;
+    private static final int DATABASE_VERSION = 43;
 
     // Table foods
     private static final String TABLE_PM = "preset_meals";
@@ -95,12 +95,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String COL_WE_WEIGHT = "weight";
 
     // Table settings
-    private static final String TABLE_S = "settings";
-    private static final String COL_S_INDEX = "goals_index";
+    private static final String TABLE_S_GOAL = "settings_goals";
+    private static final String COL_S_INDEX = "settings_index";
     private static final String COL_S_GOAL_CALORIES = "goal_calories";
     private static final String COL_S_GOAL_FAT = "goal_fat";
     private static final String COL_S_GOAL_CARBS = "goal_carbs";
     private static final String COL_S_GOAL_PROTEIN = "goal_protein";
+
+    private static final String TABLE_S_LANG = "settings_lang";
+    private static final String COL_S_LANG = "language";
 
 
     // Constructor ---------------------------------------------------------------------------------
@@ -196,12 +199,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL("CREATE TABLE " + TABLE_WR + " ("+ COL_WR_PLAN_NAME + " TEXT, " + COL_WR_ROUTINE_NAME + " TEXT, PRIMARY KEY (" + COL_WR_PLAN_NAME + ", " + COL_WR_ROUTINE_NAME + "));");
 
         // Create table settings
-        sqLiteDatabase.execSQL("CREATE TABLE " + TABLE_S + " ("
+        sqLiteDatabase.execSQL("CREATE TABLE " + TABLE_S_GOAL + " ("
                 + COL_S_INDEX + " INTEGER PRIMARY KEY, "
                 + COL_S_GOAL_CALORIES + " REAL, "
                 + COL_S_GOAL_FAT + " REAL, "
                 + COL_S_GOAL_CARBS + " REAL, "
                 + COL_S_GOAL_PROTEIN + " REAL);");
+
+        sqLiteDatabase.execSQL("CREATE TABLE " + TABLE_S_LANG + " ("
+                + COL_S_INDEX + " INTEGER PRIMARY KEY, "
+                + COL_S_LANG + " TEXT);");
 
         // Add preset data to tables ---------------------------------------------------------------
 
@@ -211,16 +218,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // -> Preset meals indices have always 1 digit more (7 digits in total) than user created meals to prevent overlaps
         sqLiteDatabase.execSQL("INSERT INTO " + TABLE_PM + " VALUES('000000000', 'Apple (100 g)', 'Fruits and Vegetables', 52, 0.17, 0, 13.81, 10.39, 0.26, 0, 2.4, 0, 0, 6, 0.12, 107, 5, 0.035, 1, 11, 0.04, 0.003, 0.017, 0.026, 0.091, 0.061, 0.041, 0, 0, 0, 4.6, 0.18, 0.022, 0)");
         sqLiteDatabase.execSQL("INSERT INTO " + TABLE_PM + " VALUES('000000001', 'Banana (100 g)', 'Fruits and Vegetables', 95.0, 0.33, 0.0, 22.84, 12.23, 1.0, 0.0, 2.6, 0.0, 0.0, 5.0, 0.26, 358.0, 27.0, 0.0, 0.0, 22.0, 0.15, 0.003, 0.031, 0.073, 0.665, 0.334, 0.367, 0.0, 0.0, 0.0, 8.7, 0.0, 0.0, 0.0)");
-
-        sqLiteDatabase.execSQL("INSERT INTO " + TABLE_PM + " VALUES('100000000', 'Long-grain brown rice (uncooked)', 'Grains and Cereals', 362.0, 2.3, 0.7, 75.0, 1.9, 7.8, 0.03, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0)");
-
-        sqLiteDatabase.execSQL("INSERT INTO " + TABLE_PM + " VALUES('200000000', 'Oakmilk', 'Drinks', 40.0, 1.4, 0.2, 6.0, 5.2, 0.6, 0.13, 0.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0)");
-
-        sqLiteDatabase.execSQL("INSERT INTO " + TABLE_PM + " VALUES('300000000', 'Agave Syrup', 'Spices, Sauces, Oils', 307.0, 0.5, 0.1, 75.0, 75.0, 0.5, 0.03, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0)");
-        sqLiteDatabase.execSQL("INSERT INTO " + TABLE_PM + " VALUES('300000001', 'Soy Sauce', 'Spices, Sauces, Oils', 41.0, 0.0, 0.0, 5.0, 1.4, 5.3, 17.77, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0)");
-
-        sqLiteDatabase.execSQL("INSERT INTO " + TABLE_PM + " VALUES('400000000', 'Smoked Tofu', 'Veggie Products', 168.0, 9.5, 1.6, 2.0, 0.5, 18.0, 1.04, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0)");
-
 
         // Add meal categories
         sqLiteDatabase.execSQL("INSERT INTO " + TABLE_PMC + " VALUES('Fruits and Vegetables');");
@@ -251,7 +248,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         // Settings
         // -> (index, calories, carbs, fat, protein). First value is index. Must always be 0.
-        sqLiteDatabase.execSQL("INSERT INTO " + TABLE_S + " VALUES(0, 2500, 200, 100, 160)");
+        sqLiteDatabase.execSQL("INSERT INTO " + TABLE_S_GOAL + " VALUES(0, 2500, 200, 100, 160)");
+
+        sqLiteDatabase.execSQL("INSERT INTO " + TABLE_S_LANG + " VALUES(0, 'system')");
     }
 
     /** This method will be called upon upgrading the database from one version to a higher one.
@@ -270,7 +269,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_WE);
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_WR);
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_WP);
-        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_S);
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_S_GOAL);
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_S_LANG);
 
         // Create new database
         onCreate(sqLiteDatabase);
@@ -640,7 +640,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     // Settings Query's ----------------------------------------------------------------------------
 
     public Cursor getSettingsGoals() {
-        // -> Read settings from table "settings"
+        // -> Read settings from table "settings_goals"
 
         SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
         Cursor cursor = null;
@@ -648,7 +648,23 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         if (sqLiteDatabase != null) {
             cursor = sqLiteDatabase.rawQuery(
                     "SELECT " + COL_S_GOAL_CALORIES + ", " + COL_S_GOAL_FAT + ", " + COL_S_GOAL_CARBS + ", " + COL_S_GOAL_PROTEIN +
-                    " FROM " + TABLE_S + ";",
+                    " FROM " + TABLE_S_GOAL +
+                    " WHERE " + COL_S_INDEX + "=0;",
+                    null);
+        }
+
+        return cursor;
+    }
+
+    public Cursor getSettingsLanguage() {
+        // -> Read settings from table "settings_lang"
+
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+        Cursor cursor = null;
+
+        if (sqLiteDatabase != null) {
+            cursor = sqLiteDatabase.rawQuery(
+                    "SELECT " + COL_S_LANG + " FROM " + TABLE_S_LANG + " WHERE " + COL_S_INDEX + "=0;",
                     null);
         }
 
@@ -668,11 +684,29 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         cv.put(COL_S_GOAL_CARBS, goalCarbs);
         cv.put(COL_S_GOAL_PROTEIN, goalProtein);
 
-        long result = sqLiteDatabase.replaceOrThrow(TABLE_S, null, cv);
+        long result = sqLiteDatabase.replaceOrThrow(TABLE_S_GOAL, null, cv);
         if (result == -1) {
             Toast.makeText(context, "Failed to save settings", Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(context, "Saved settings", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public void setSettingsLanguage(String language) {
+        // Get database
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+
+        // Create content values to put into the database
+        ContentValues cv = new ContentValues();
+
+        cv.put(COL_S_INDEX, 0);
+        cv.put(COL_S_LANG, language);
+
+        long result = sqLiteDatabase.replaceOrThrow(TABLE_S_LANG, null, cv);
+        if (result == -1) {
+            Toast.makeText(context, "Failed to save settings", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(context, "Saved settings. Close App to apply changes.", Toast.LENGTH_SHORT).show();
         }
     }
 

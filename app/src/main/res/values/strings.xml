@@ -78,4 +78,7 @@
     <string name="button_text_save">Save</string>
     <string name="button_text_cancel">Cancel</string>
 
+    <string name="lang_de">German</string>
+    <string name="lang_en">English</string>
+
 </resources>

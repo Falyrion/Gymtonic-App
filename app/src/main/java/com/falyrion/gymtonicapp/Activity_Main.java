@@ -3,7 +3,11 @@ package com.falyrion.gymtonicapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.content.res.Resources;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -47,6 +51,23 @@ public class Activity_Main extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
     }
 
+    private static void updateLanguage(Context context, String language) {
+
+        if (language.equals("system")) {
+            return;
+        }
+
+        Locale locale = new Locale(language);
+        Locale.setDefault(locale);
+
+        Resources resources = context.getResources();
+
+        Configuration configuration = resources.getConfiguration();
+        configuration.locale = locale;
+
+        resources.updateConfiguration(configuration, resources.getDisplayMetrics());
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +76,14 @@ public class Activity_Main extends AppCompatActivity {
 
         // Database
         databaseHelper = new DatabaseHelper(Activity_Main.this);
+
+        // Update language
+        Cursor cursor = databaseHelper.getSettingsLanguage();
+        if (cursor.getCount() > 0) {
+            cursor.moveToFirst();
+            updateLanguage(this, cursor.getString(0));
+        }
+        cursor.close();
 
         // -----------------------------------------------------------------------------------------
         // Get data if activity was started by another activity

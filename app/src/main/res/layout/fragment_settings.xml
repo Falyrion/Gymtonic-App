@@ -8,15 +8,6 @@
     android:orientation="vertical"
     tools:context=".fragments.Fragment_Settings">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:text="Daily Goals"
-        android:textColor="@color/text_low"
-        android:textSize="20dp"/>
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -24,121 +15,165 @@
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp">
 
-        <TableLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/shape_box_round_middle">
+            android:orientation="vertical">
 
-            <TableRow
+            <!-- Section title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Daily Goals"
+                android:textColor="@color/text_low"
+                android:textSize="20dp"/>
+
+            <!-- Settings goals -->
+            <TableLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_box_round_middle">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_weight="1"
-                    android:text="Calories [kcal]"
-                    android:textAlignment="textStart"
-                    android:textColor="@color/text_middle"
-                    android:textSize="20dp" />
-
-                <EditText
-                    android:id="@+id/editTextSettingsGoalsCal"
+                <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="20dp"
-                    android:layout_weight="2"
-                    android:inputType="numberDecimal"
-                    android:text="1000"
-                    android:textAlignment="textEnd"
-                    android:textColor="@color/text_middle"
-                    android:textSize="20dp" />
+                    android:layout_height="wrap_content">
 
-            </TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="1"
+                        android:text="Calories [kcal]"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/text_middle"
+                        android:textSize="20dp" />
 
-            <TableRow
+                    <EditText
+                        android:id="@+id/editTextSettingsGoalsCal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:layout_weight="2"
+                        android:inputType="numberDecimal"
+                        android:text="1000"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_middle"
+                        android:textSize="20dp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:text="Fat [g]"
+                        android:textSize="20dp"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/text_middle"
+                        android:layout_marginLeft="20dp"/>
+
+                    <EditText
+                        android:id="@+id/editTextSettingsGoalsFat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:layout_weight="2"
+                        android:text="1000"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_middle"
+                        android:textSize="20dp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:text="Carbohydrates [g]"
+                        android:textSize="20dp"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/text_middle"
+                        android:layout_marginLeft="20dp"/>
+
+                    <EditText
+                        android:id="@+id/editTextSettingsGoalsCarbs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:layout_weight="2"
+                        android:text="1000"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_middle"
+                        android:textSize="20dp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:text="Protein [g]"
+                        android:textSize="20dp"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/text_middle"
+                        android:layout_marginLeft="20dp"/>
+
+                    <EditText
+                        android:id="@+id/editTextSettingsGoalsProtein"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:layout_weight="2"
+                        android:text="1000"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_middle"
+                        android:textSize="20dp" />
+                </TableRow>
+
+            </TableLayout>
+
+            <!-- Section title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Language"
+                android:textColor="@color/text_low"
+                android:textSize="20dp"/>
+
+            <!-- Settings language -->
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="50dp"
+                android:background="@drawable/shape_box_round_middle">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:layout_weight="1"
-                    android:text="Fat [g]"
-                    android:textSize="20dp"
-                    android:textAlignment="viewStart"
-                    android:textColor="@color/text_middle"
-                    android:layout_marginLeft="20dp"/>
-
-                <EditText
-                    android:id="@+id/editTextSettingsGoalsFat"
+                <Spinner
+                    android:id="@+id/spinnerLanguages"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="20dp"
-                    android:layout_weight="2"
-                    android:text="1000"
-                    android:inputType="numberDecimal"
-                    android:textAlignment="textEnd"
-                    android:textColor="@color/text_middle"
-                    android:textSize="20dp" />
-            </TableRow>
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:tooltipText="Select language"/>
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            </LinearLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:layout_weight="1"
-                    android:text="Carbohydrates [g]"
-                    android:textSize="20dp"
-                    android:textAlignment="viewStart"
-                    android:textColor="@color/text_middle"
-                    android:layout_marginLeft="20dp"/>
+        </LinearLayout>
 
-                <EditText
-                    android:id="@+id/editTextSettingsGoalsCarbs"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="20dp"
-                    android:layout_weight="2"
-                    android:text="1000"
-                    android:inputType="numberDecimal"
-                    android:textAlignment="textEnd"
-                    android:textColor="@color/text_middle"
-                    android:textSize="20dp" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:layout_weight="1"
-                    android:text="Protein [g]"
-                    android:textSize="20dp"
-                    android:textAlignment="viewStart"
-                    android:textColor="@color/text_middle"
-                    android:layout_marginLeft="20dp"/>
-
-                <EditText
-                    android:id="@+id/editTextSettingsGoalsProtein"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="20dp"
-                    android:layout_weight="2"
-                    android:text="1000"
-                    android:inputType="numberDecimal"
-                    android:textAlignment="textEnd"
-                    android:textColor="@color/text_middle"
-                    android:textSize="20dp" />
-            </TableRow>
-
-        </TableLayout>
 
     </ScrollView>
 
