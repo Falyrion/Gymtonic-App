@@ -19,3 +19,7 @@ An Android fitness app for nutrition tracking and workout plans
 
 ### Body Stats *(coming soon)*
 - Track your body stats (like weight) over a period of time.
+
+# Translations
+
+The app is currently translated to english (default) and german. Language will change depending the users system settings.
