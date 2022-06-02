@@ -31,7 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:text="Name"
+            android:text="@string/title_name"
             android:layout_gravity="center"
             android:textColor="@color/text_low"
             android:textSize="20sp"/>
@@ -45,14 +45,14 @@
 
             <EditText
                 android:id="@+id/editTextExerciseName"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
                 android:layout_weight="1"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:hint="Enter exercise name here"
+                android:hint="@string/hint_enter_name_exercise"
                 android:textColorHint="@color/text_low"
                 android:textAlignment="center"
                 android:textColor="@color/text_middle" />
@@ -67,7 +67,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="5dp"
-            android:text="Workout Plan"
+            android:text="@string/workout_plans"
             android:layout_gravity="center"
             android:textColor="@color/text_low"
             android:textSize="20sp"/>
@@ -88,7 +88,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="5dp"
-            android:text="Routine"
+            android:text="@string/workout_routines"
             android:layout_gravity="center"
             android:textColor="@color/text_low"
             android:textSize="20sp"/>
@@ -109,7 +109,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:text="Details"
+            android:text="@string/title_details"
             android:layout_gravity="center"
             android:textColor="@color/text_low"
             android:textSize="20sp"/>
@@ -163,7 +163,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Repetitions"
+                android:text="@string/workout_reps"
                 android:textColor="@color/text_middle"
                 android:layout_marginStart="20dp"
                 android:textAlignment="viewStart"
@@ -201,7 +201,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Weight [kg]"
+                android:text="@string/workout_weight"
                 android:textColor="@color/text_middle"
                 android:layout_marginStart="20dp"
                 android:textAlignment="viewStart"
@@ -244,7 +244,7 @@
             android:layout_weight="1"
             android:background="@drawable/shape_box_round_light"
             android:textColor="@color/text_middle"
-            android:text="Cancel" />
+            android:text="@string/button_text_cancel" />
 
         <Space
             android:layout_width="10dp"
@@ -257,7 +257,7 @@
             android:layout_weight="1"
             android:background="@drawable/shape_box_round_light"
             android:textColor="@color/text_middle"
-            android:text="Save" />
+            android:text="@string/button_text_save" />
 
     </LinearLayout>
 

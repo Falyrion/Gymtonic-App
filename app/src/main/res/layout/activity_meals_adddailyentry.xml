@@ -69,7 +69,7 @@
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
             android:background="@drawable/shape_box_round_light"
-            android:text="Create new custom meal"
+            android:text="@string/button_text_create_meal"
             android:textColor="@color/text_middle"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

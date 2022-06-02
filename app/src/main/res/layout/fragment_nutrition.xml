@@ -504,8 +504,7 @@
                     android:layout_marginRight="10dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="20dp"
-                    android:visibility="gone"
-                    android:background="@drawable/shape_box_round_middle">
+                    android:visibility="gone">
 
                     <TableRow
                         android:layout_marginTop="10dp"

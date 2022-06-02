@@ -36,6 +36,6 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/shape_box_round_light"
         android:textColor="@color/text_middle"
-        android:text="Create new plan"/>
+        android:text="@string/button_create_plan"/>
 
 </LinearLayout>

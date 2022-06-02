@@ -26,9 +26,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
-                android:text="Daily Goals"
+                android:text="@string/settings_goals"
                 android:textColor="@color/text_low"
-                android:textSize="20dp"/>
+                android:textSize="20sp"/>
 
             <!-- Settings goals -->
             <TableLayout
@@ -45,10 +45,10 @@
                         android:layout_height="40dp"
                         android:layout_marginLeft="20dp"
                         android:layout_weight="1"
-                        android:text="Calories [kcal]"
+                        android:text="@string/calories_kcal"
                         android:textAlignment="textStart"
                         android:textColor="@color/text_middle"
-                        android:textSize="20dp" />
+                        android:textSize="20sp" />
 
                     <EditText
                         android:id="@+id/editTextSettingsGoalsCal"
@@ -60,7 +60,7 @@
                         android:text="1000"
                         android:textAlignment="textEnd"
                         android:textColor="@color/text_middle"
-                        android:textSize="20dp" />
+                        android:textSize="20sp" />
 
                 </TableRow>
 
@@ -72,11 +72,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
                         android:layout_weight="1"
-                        android:text="Fat [g]"
-                        android:textSize="20dp"
+                        android:text="@string/fat_g"
+                        android:textSize="20sp"
                         android:textAlignment="viewStart"
                         android:textColor="@color/text_middle"
-                        android:layout_marginLeft="20dp"/>
+                        android:layout_marginStart="20dp"/>
 
                     <EditText
                         android:id="@+id/editTextSettingsGoalsFat"
@@ -88,7 +88,7 @@
                         android:inputType="numberDecimal"
                         android:textAlignment="textEnd"
                         android:textColor="@color/text_middle"
-                        android:textSize="20dp" />
+                        android:textSize="20sp" />
                 </TableRow>
 
                 <TableRow
@@ -99,11 +99,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
                         android:layout_weight="1"
-                        android:text="Carbohydrates [g]"
-                        android:textSize="20dp"
+                        android:text="@string/carbs_g"
+                        android:textSize="20sp"
                         android:textAlignment="viewStart"
                         android:textColor="@color/text_middle"
-                        android:layout_marginLeft="20dp"/>
+                        android:layout_marginStart="20dp"/>
 
                     <EditText
                         android:id="@+id/editTextSettingsGoalsCarbs"
@@ -115,7 +115,7 @@
                         android:inputType="numberDecimal"
                         android:textAlignment="textEnd"
                         android:textColor="@color/text_middle"
-                        android:textSize="20dp" />
+                        android:textSize="20sp" />
                 </TableRow>
 
                 <TableRow
@@ -126,11 +126,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
                         android:layout_weight="1"
-                        android:text="Protein [g]"
+                        android:text="@string/protein_g"
                         android:textSize="20dp"
                         android:textAlignment="viewStart"
                         android:textColor="@color/text_middle"
-                        android:layout_marginLeft="20dp"/>
+                        android:layout_marginStart="20dp"/>
 
                     <EditText
                         android:id="@+id/editTextSettingsGoalsProtein"
@@ -153,9 +153,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
-                android:text="Language"
+                android:text="@string/settings_lang"
                 android:textColor="@color/text_low"
-                android:textSize="20dp"/>
+                android:textSize="20sp"/>
 
             <!-- Settings language -->
             <LinearLayout
@@ -190,7 +190,7 @@
         android:layout_marginBottom="10dp"
         android:background="@drawable/shape_box_round_light"
         android:textColor="@color/text_middle"
-        android:text="Save" />
+        android:text="@string/button_text_save" />
 
     <TextView
         android:layout_width="match_parent"

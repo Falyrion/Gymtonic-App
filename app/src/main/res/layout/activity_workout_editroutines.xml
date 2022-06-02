@@ -25,9 +25,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:text="Select workout plan"
+        android:text="@string/title_select_plan"
         android:textColor="@color/text_low"
-        android:textSize="20dp"/>
+        android:textSize="20sp"/>
 
     <!-- Spinner "Workout plans" -->
     <LinearLayout
@@ -57,7 +57,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:text="Routines"
+        android:text="@string/workout_routines"
         android:textColor="@color/text_low"
         android:textSize="20dp"/>
 
@@ -82,6 +82,6 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/shape_box_round_light"
         android:textColor="@color/text_middle"
-        android:text="Add new routine" />
+        android:text="@string/button_add_routine" />
 
 </LinearLayout>

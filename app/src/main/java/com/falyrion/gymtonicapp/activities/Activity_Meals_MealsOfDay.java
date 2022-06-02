@@ -83,7 +83,7 @@ public class Activity_Meals_MealsOfDay extends AppCompatActivity implements Adap
 
         // Set up toolbar --------------------------------------------------------------------------
         Toolbar toolbar = findViewById(R.id.toolbarActivityMealsOfDay);
-        toolbar.setTitle("Edit meals");
+        toolbar.setTitle(getResources().getString(R.string.dn_button_edit));
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);

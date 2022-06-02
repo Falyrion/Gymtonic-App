@@ -329,9 +329,9 @@ public class Activity_Workout_CreateEditExercise extends AppCompatActivity imple
 
         toolbarActivityCreateExercise = findViewById(R.id.toolbarActivityCreateExercise);
         if (mode.equals("edit")) {
-            toolbarActivityCreateExercise.setTitle("Edit exercise");
+            toolbarActivityCreateExercise.setTitle(getResources().getString(R.string.button_edit_exercises));
         } else {
-            toolbarActivityCreateExercise.setTitle("Add new exercise");
+            toolbarActivityCreateExercise.setTitle(getResources().getString(R.string.button_create_exercises));
         }
         setSupportActionBar(toolbarActivityCreateExercise);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -381,7 +381,7 @@ public class Activity_Workout_CreateEditExercise extends AppCompatActivity imple
                     saveButton.setBackgroundResource(R.drawable.shape_box_round_light);
                     saveButton.setTextColor(getColor(R.color.text_middle));
                     cancelButton.setText(R.string.button_text_back);
-                    toolbarActivityCreateExercise.setTitle("Edit exercise");
+                    toolbarActivityCreateExercise.setTitle(getResources().getString(R.string.button_create_exercises));
 
                     Snackbar.make(view, "Exercise saved!", Snackbar.LENGTH_SHORT).show();
                 }

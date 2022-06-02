@@ -307,9 +307,9 @@ public class Activity_Meals_CreateEditPreset extends AppCompatActivity implement
         // Set up toolbar
         Toolbar toolbarActivityCreateMeal = (Toolbar) findViewById(R.id.toolbarActivityCreateMeal);
         if (mode.equals("create")) {
-            toolbarActivityCreateMeal.setTitle("Create new meal preset");
+            toolbarActivityCreateMeal.setTitle(getResources().getString(R.string.dn_button_add));
         } else if (mode.equals("edit")) {
-            toolbarActivityCreateMeal.setTitle("Edit meal preset");
+            toolbarActivityCreateMeal.setTitle(getResources().getString(R.string.dn_button_edit));
         }
 
         setSupportActionBar(toolbarActivityCreateMeal);

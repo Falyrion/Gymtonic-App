@@ -58,7 +58,7 @@
             android:layout_marginEnd="10dp"
             android:background="@drawable/shape_box_round_light"
             android:textColor="@color/text_middle"
-            android:text="Add meal" />
+            android:text="@string/dn_button_add" />
 
         <Space
             android:layout_width="match_parent"
@@ -78,7 +78,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/shape_box_round_light"
                 android:textColor="@color/text_middle"
-                android:text="Cancel" />
+                android:text="@string/button_text_cancel" />
 
             <Space
                 android:layout_width="10dp"
@@ -91,7 +91,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/shape_box_round_light"
                 android:textColor="@color/text_middle"
-                android:text="Save" />
+                android:text="@string/button_text_save" />
         </LinearLayout>
     </LinearLayout>
 
@@ -103,7 +103,7 @@
         android:layout_height="600dp"
         android:textAlignment="center"
         android:gravity="center"
-        android:text="No entries found for today"
+        android:text="@string/hint_no_entries"
         android:textSize="20sp"
         android:textColor="@color/text_middle"/>
 

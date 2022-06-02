@@ -85,9 +85,9 @@ public class Activity_Workout_EditRoutines extends AppCompatActivity implements 
         EditText editTextRoutineName = view.findViewById(R.id.dialogEditText);
         editTextRoutineName.setText(currentRoutineName);
 
-        builder.setTitle("Edit routine name");
-        builder.setNegativeButton("Cancel", null);
-        builder.setPositiveButton("Save", new DialogInterface.OnClickListener() {
+        builder.setTitle(getResources().getString(R.string.button_edit_routines));
+        builder.setNegativeButton(getResources().getString(R.string.button_text_cancel), null);
+        builder.setPositiveButton(getResources().getString(R.string.button_text_save), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 String newRoutineName = editTextRoutineName.getText().toString();
@@ -119,9 +119,9 @@ public class Activity_Workout_EditRoutines extends AppCompatActivity implements 
         EditText editTextRoutineName = view.findViewById(R.id.dialogEditText);
         editTextRoutineName.setHint("Enter plan name");
 
-        builder.setTitle("Create New Workout Routine");
-        builder.setNegativeButton("Cancel", null);
-        builder.setPositiveButton("Create routine", new DialogInterface.OnClickListener() {
+        builder.setTitle(getResources().getString(R.string.button_create_routines));
+        builder.setNegativeButton(getResources().getString(R.string.button_text_cancel), null);
+        builder.setPositiveButton(getResources().getString(R.string.button_create_routines), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 String text = editTextRoutineName.getText().toString();

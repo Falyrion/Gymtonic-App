@@ -42,7 +42,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:text="Routines"
+            android:text="@string/workout_routines"
             android:layout_gravity="center"
             android:textColor="@color/text_low"
             android:textSize="20sp"/>
@@ -64,7 +64,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:text="Exercises"
+            android:text="@string/workout_exercises"
             android:layout_gravity="center"
             android:textColor="@color/text_low"
             android:textSize="20sp"/>
@@ -116,8 +116,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Edit Exercises"
-            android:textSize="20dp"
+            android:text="@string/button_edit_exercises"
+            android:textSize="20sp"
             android:textColor="@color/text_high"
             android:layout_gravity="center"/>
 
@@ -151,8 +151,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Edit Workout Routines"
-            android:textSize="20dp"
+            android:text="@string/button_edit_routines"
+            android:textSize="20sp"
             android:textColor="@color/text_high"
             android:layout_gravity="center"/>
 
@@ -186,8 +186,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Edit Workout Plans"
-            android:textSize="20dp"
+            android:text="@string/button_edit_plans"
+            android:textSize="20sp"
             android:textColor="@color/text_high"
             android:layout_gravity="center"/>
 

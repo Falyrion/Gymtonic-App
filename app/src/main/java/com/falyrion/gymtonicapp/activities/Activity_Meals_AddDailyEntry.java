@@ -139,7 +139,7 @@ public class Activity_Meals_AddDailyEntry extends AppCompatActivity implements A
 
         // Set up toolbar --------------------------------------------------------------------------
         Toolbar toolbar = findViewById(R.id.toolbarActivityAddMeal);
-        toolbar.setTitle("Add meals");
+        toolbar.setTitle(getResources().getString(R.string.dn_button_add));
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);

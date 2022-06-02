@@ -150,7 +150,7 @@ public class Activity_Workout_EditPlans extends AppCompatActivity implements Ada
         // Toolbar ---------------------------------------------------------------------------------
 
         Toolbar toolbar = findViewById(R.id.toolbarActivityEditPlans);
-        toolbar.setTitle("Edit workout plans");
+        toolbar.setTitle(getResources().getString(R.string.button_edit_plans));
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
