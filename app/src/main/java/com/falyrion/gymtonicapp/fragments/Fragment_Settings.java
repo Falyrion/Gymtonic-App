@@ -48,6 +48,7 @@ public class Fragment_Settings extends Fragment {
 
             // Update background resource of save button
             saveButton.setBackgroundResource(R.drawable.shape_box_round_pop);
+            saveButton.setTextColor(getContext().getColor(R.color.text_high));
             savePossible = true;
         }
     }
@@ -115,7 +116,8 @@ public class Fragment_Settings extends Fragment {
             public void onClick(View view) {
                 if (savePossible) {
                     savePossible = false;
-                    saveButton.setBackgroundResource(R.drawable.shape_box_round_pop);
+                    saveButton.setBackgroundResource(R.drawable.shape_box_round_middle);
+                    saveButton.setTextColor(getContext().getColor(R.color.text_middle));
 
                     ((Activity_Main) requireContext()).databaseHelper.setSettingsGoals(dataGoals[0], dataGoals[1], dataGoals[2], dataGoals[3]);
                 }
