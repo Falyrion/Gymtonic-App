@@ -22,4 +22,4 @@ An Android fitness app for nutrition tracking and workout plans
 
 # Translations
 
-The app is currently translated to english (default) and german. Language will change depending the users system settings.
+The app is currently translated to english (default) and german. Language will change depending on the users system settings.
