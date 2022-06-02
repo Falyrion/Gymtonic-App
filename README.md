@@ -11,11 +11,11 @@ An Android fitness app for nutrition tracking and workout plans
 ### Nutrient Tracker
 - Track your daily meals and nutrition.
 - Get a detailed overview about your daily intake of macro-nutrients, vitamins, trace elements, etc.
-- Choose from many existing meals in the database or create your own meal-presets.
+- Choose from many existing meal-presets in the database or create your own meal-presets.
 
 ### Workout Plans
-- Save your workout plan with exercises.
-- Ability to organise exercises in multiple plans and routines.
+- Save your own custom workout plan with exercises.
+- Organise exercises within multiple plans and routines.
 
 ### Body Stats *(coming soon)*
 - Track your body stats (like weight) over a period of time.
