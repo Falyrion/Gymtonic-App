@@ -79,8 +79,9 @@ public class Activity_Meals_CreateEditPreset extends AppCompatActivity implement
 
             // Update background resource of save button
             saveButton.setBackgroundResource(R.drawable.shape_box_round_pop);
+            saveButton.setTextColor(getColor(R.color.text_high));
             savePossible = true;
-            cancelButton.setText("Cancel");
+            cancelButton.setText(R.string.button_text_cancel);
         }
     }
 
@@ -343,7 +344,8 @@ public class Activity_Meals_CreateEditPreset extends AppCompatActivity implement
 
                     // Change button color
                     saveButton.setBackgroundResource(R.drawable.shape_box_round_light);
-                    cancelButton.setText("Back");
+                    saveButton.setTextColor(getColor(R.color.text_middle));
+                    cancelButton.setText(R.string.button_text_back);
                 }
             }
         });

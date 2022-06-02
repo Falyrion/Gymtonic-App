@@ -244,6 +244,7 @@ public class Activity_Meals_AddDailyEntry extends AppCompatActivity implements A
         if (!savePossible) {
             savePossible = true;
             saveButton.setBackgroundResource(R.drawable.shape_box_round_pop);
+            saveButton.setTextColor(getColor(R.color.text_high));
         }
         adapterPresets.notifyItemChanged(itemPosition);  // Update view
     }

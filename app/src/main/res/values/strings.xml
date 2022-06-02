@@ -73,5 +73,9 @@
     <string name="dn_button_add">Add Meal</string>
     <string name="dn_button_edit">Todays Meals</string>
 
+    <!-- UI -->
+    <string name="button_text_back">Back</string>
+    <string name="button_text_save">Save</string>
+    <string name="button_text_cancel">Cancel</string>
 
 </resources>

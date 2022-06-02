@@ -74,4 +74,9 @@
     <string name="dn_button_add">Mahlzeit hinzufügen</string>
     <string name="dn_button_edit">Heutige Mahlzeiten</string>
 
+    <!-- UI -->
+    <string name="button_text_back">Zurück</string>
+    <string name="button_text_save">Speichern</string>
+    <string name="button_text_cancel">Abbrechen</string>
+
 </resources>

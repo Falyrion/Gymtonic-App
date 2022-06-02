@@ -93,7 +93,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/shape_box_round_light"
                 android:textColor="@color/text_middle"
-                android:text="Cancel" />
+                android:text="@string/button_text_cancel" />
 
             <Space
                 android:layout_width="10dp"
@@ -106,7 +106,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/shape_box_round_light"
                 android:textColor="@color/text_middle"
-                android:text="Save" />
+                android:text="@string/button_text_save" />
 
         </LinearLayout>
 

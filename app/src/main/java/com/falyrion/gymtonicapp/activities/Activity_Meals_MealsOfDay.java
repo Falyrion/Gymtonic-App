@@ -153,7 +153,8 @@ public class Activity_Meals_MealsOfDay extends AppCompatActivity implements Adap
                     }
 
                     saveButton.setBackgroundResource(R.drawable.shape_box_round_light);
-                    cancelButton.setText("Back");
+                    saveButton.setTextColor(getColor(R.color.text_middle));
+                    cancelButton.setText(R.string.button_text_back);
                     Snackbar.make(view, "Saved", Snackbar.LENGTH_SHORT).show();
                 }
             }
@@ -201,6 +202,7 @@ public class Activity_Meals_MealsOfDay extends AppCompatActivity implements Adap
         if (!savePossible) {
             savePossible = true;
             saveButton.setBackgroundResource(R.drawable.shape_box_round_pop);
+            saveButton.setTextColor(getColor(R.color.text_high));
         }
 
         adapter.notifyItemChanged(itemPosition);  // Update view
@@ -243,6 +245,7 @@ public class Activity_Meals_MealsOfDay extends AppCompatActivity implements Adap
                 if (!savePossible) {
                     savePossible = true;
                     saveButton.setBackgroundResource(R.drawable.shape_box_round_pop);
+                    saveButton.setTextColor(getColor(R.color.text_high));
                 }
             }
         });

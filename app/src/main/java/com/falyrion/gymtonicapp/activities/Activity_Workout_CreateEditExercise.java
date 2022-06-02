@@ -118,6 +118,7 @@ public class Activity_Workout_CreateEditExercise extends AppCompatActivity imple
 
             // Update background resource of save
             saveButton.setBackgroundResource(R.drawable.shape_box_round_pop);
+            saveButton.setTextColor(getColor(R.color.text_high));
             savePossible = true;
         }
     }
@@ -378,7 +379,8 @@ public class Activity_Workout_CreateEditExercise extends AppCompatActivity imple
 
                     // Change button color
                     saveButton.setBackgroundResource(R.drawable.shape_box_round_light);
-                    cancelButton.setText("Back");
+                    saveButton.setTextColor(getColor(R.color.text_middle));
+                    cancelButton.setText(R.string.button_text_back);
                     toolbarActivityCreateExercise.setTitle("Edit exercise");
 
                     Snackbar.make(view, "Exercise saved!", Snackbar.LENGTH_SHORT).show();
