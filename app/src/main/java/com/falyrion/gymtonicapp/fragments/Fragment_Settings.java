@@ -4,6 +4,7 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,9 +27,9 @@ public class Fragment_Settings extends Fragment implements AdapterView.OnItemSel
     private String[] languages;
     private String currentLanguage;
     private boolean savePossible = false;
+    private boolean firstSelect = true;
 
     private Button saveButton;
-
 
     private class textWatcher implements TextWatcher {
         private int id;
@@ -52,9 +53,7 @@ public class Fragment_Settings extends Fragment implements AdapterView.OnItemSel
             dataGoals[id] = Double.parseDouble(editable.toString());
 
             // Update background resource of save button
-            saveButton.setBackgroundResource(R.drawable.shape_box_round_pop);
-            saveButton.setTextColor(getContext().getColor(R.color.text_high));
-            savePossible = true;
+            enableSaveButton();
         }
     }
 
@@ -66,6 +65,13 @@ public class Fragment_Settings extends Fragment implements AdapterView.OnItemSel
         } else {
             return String.valueOf(value);
         }
+    }
+
+    private void enableSaveButton() {
+        saveButton.setBackgroundResource(R.drawable.shape_box_round_pop);
+        saveButton.setTextColor(getContext().getColor(R.color.text_high));
+        saveButton.setVisibility(View.VISIBLE);
+        savePossible = true;
     }
 
 
@@ -131,6 +137,7 @@ public class Fragment_Settings extends Fragment implements AdapterView.OnItemSel
 
         // Button
         saveButton = getView().findViewById(R.id.buttonSaveSettings);
+        saveButton.setVisibility(View.INVISIBLE);
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -138,6 +145,7 @@ public class Fragment_Settings extends Fragment implements AdapterView.OnItemSel
                     savePossible = false;
                     saveButton.setBackgroundResource(R.drawable.shape_box_round_middle);
                     saveButton.setTextColor(getContext().getColor(R.color.text_middle));
+                    saveButton.setVisibility(View.INVISIBLE);
 
                     ((Activity_Main) requireContext()).databaseHelper.setSettingsGoals(dataGoals[0], dataGoals[1], dataGoals[2], dataGoals[3]);
                     ((Activity_Main) requireContext()).databaseHelper.setSettingsLanguage(currentLanguage);
@@ -150,6 +158,12 @@ public class Fragment_Settings extends Fragment implements AdapterView.OnItemSel
     // Methods from imported spinner interface -----------------------------------------------------
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
+        // Guard clause against the automatic item select on creation
+        if (firstSelect) {
+            firstSelect = false;
+            return;
+        }
+
         // Set value
         switch (position) {
             case 0: currentLanguage = "de"; break;
@@ -157,9 +171,7 @@ public class Fragment_Settings extends Fragment implements AdapterView.OnItemSel
         }
 
         // Update button
-        saveButton.setBackgroundResource(R.drawable.shape_box_round_pop);
-        saveButton.setTextColor(getContext().getColor(R.color.text_high));
-        savePossible = true;
+        enableSaveButton();
     }
 
     @Override
