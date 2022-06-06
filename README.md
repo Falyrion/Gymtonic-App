@@ -4,7 +4,7 @@
     <!-- Java -->
     <a href="" target="blank"><img align="center" src="https://img.shields.io/badge/Made%20with-Java-orange?style=for-the-badge&logo=Java" alt="falyrion"/></a>
     <!-- Android -->
-    <a href="https://www.spigotmc.org/" target="blank"><img align="center" src="https://img.shields.io/badge/Made%20for-android-3DDC84?style=for-the-badge" alt="falyrion"/></a>
+    <a href="https://www.android.com/" target="blank"><img align="center" src="https://img.shields.io/badge/Made%20for-android-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="android"/></a>
 </p>
 
 # Gymtonic-App
