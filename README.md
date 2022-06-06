@@ -1,5 +1,12 @@
 ![app showcase](resources/showcase.png)
 
+<p align="center">
+    <!-- Java -->
+    <a href="" target="blank"><img align="center" src="https://img.shields.io/badge/Made%20with-Java-orange?style=for-the-badge&logo=Java" alt="falyrion"/></a>
+    <!-- Android -->
+    <a href="https://www.spigotmc.org/" target="blank"><img align="center" src="https://img.shields.io/badge/Made%20for-android-3DDC84?style=for-the-badge" alt="falyrion"/></a>
+</p>
+
 # Gymtonic-App
 
 An Android fitness app for nutrition tracking and workout plans
