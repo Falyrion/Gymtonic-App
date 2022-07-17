@@ -37,10 +37,10 @@ An Android fitness app for nutrition tracking and workout plans
 <!-- Icons -->
 <p align="center">
     <p align="center">
-        <img src="app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" alt="icon"/>
-        <img src="app/src/main/res/mipmap-xxhdpi/ic_launcher.png" alt="icon"/>
+        <img src="app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" alt="icon"/>
+        <img src="app/src/main/res/mipmap-xhdpi/ic_launcher.png" alt="icon"/>
     </p>
     <p align="center">
-    App Icons
+    <i>App Icons</i>
     </p>
 </p>
