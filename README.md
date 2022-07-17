@@ -1,4 +1,4 @@
-![app showcase](resources/showcase.png)
+![](resources/mockup_frames.png)
 
 <p align="center">
     <!-- Java -->
@@ -34,6 +34,9 @@ An Android fitness app for nutrition tracking and workout plans
  - German
 
 # Screenshots
+
+![app showcase](resources/showcase.png)
+
 <!-- Icons -->
 <p align="center">
     <p align="center">
