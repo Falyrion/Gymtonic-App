@@ -2,9 +2,9 @@
 
 <p align="center">
     <!-- Java -->
-    <a target="blank"><img align="center" src="https://img.shields.io/badge/Made%20with-Java-orange?style=for-the-badge&logo=Java" alt="falyrion"/></a>
+    <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://img.shields.io/badge/Made%20with-Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" alt="java"/></a>
     <!-- Android -->
-    <a href="https://www.android.com/" target="blank"><img align="center" src="https://img.shields.io/badge/Made%20for-android-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="android"/></a>
+    <a href="https://www.android.com/" target="blank"><img src="https://img.shields.io/badge/Made%20for-android-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="android"/></a>
 </p>
 
 # Gymtonic-App
@@ -29,4 +29,18 @@ An Android fitness app for nutrition tracking and workout plans
 
 # Translations
 
-The app is currently translated to english (default) and german. Language will change depending on the users system settings.
+ The language will change depending on the users system settings. The app is currently translated to:
+ - English (default)
+ - German
+
+# Screenshots
+<!-- Icons -->
+<p align="center">
+    <p align="center">
+        <img src="app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" alt="icon"/>
+        <img src="app/src/main/res/mipmap-xxhdpi/ic_launcher.png" alt="icon"/>
+    </p>
+    <p align="center">
+    App Icons
+    </p>
+</p>
