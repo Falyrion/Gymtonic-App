@@ -11,7 +11,7 @@
 
 An Android fitness app for nutrition tracking and workout plans
 
-*Attention: This app is currently in alpha-development-status.*
+> Attention: This app is currently in alpha-development-status. At the moment only local storage of data is supported. I am working on a web-backend using Flask and MongoDB which is expected to release soon.
 
 # Features
 
